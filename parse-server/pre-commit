@@ -7,7 +7,7 @@ function abort {
 
 # disallow commits if a test uses 'fit'.
 rootDir=$(git rev-parse --show-toplevel)
-if grep -q -r --include="*.js" "fit(" ${rootDir}/spec
+if grep -q -r --include="*.js" "fit(\|fit_exclude_dbs(" ${rootDir}/spec
 then
     # found
     abort "pre-commit: Aborting commit because a test uses 'fit'."
