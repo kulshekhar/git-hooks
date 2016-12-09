@@ -12,3 +12,6 @@ then
     # found
     abort "pre-commit: Aborting commit because a test uses 'fit'."
 fi
+
+# run lint check
+npm run lint
